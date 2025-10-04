@@ -1,0 +1,44 @@
+# GitHub Action for generating a contribution graph with a snake eating your contributions
+name: Generate Snake
+
+on:
+  # Run automatically every 12 hours
+  schedule:
+    - cron: "0 */12 * * *"
+
+  # Allows to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate Snake animation
+        # Uses the Platane/snk action
+        uses: Platane/snk@v3
+        with:
+          # Your GitHub username
+          github_user_name: ${{ github.repository_owner }}
+
+          # A list of files to generate
+          #
+          # default branch -> dist/github-snake.svg
+          # dark theme -> dist/github-snake-dark.svg?palette=github-dark
+          # ocean theme -> dist/ocean.svg?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+
+      - name: Push generated files
+        # Uses the crazy-max/ghaction-github-pages action to commit and push the files
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          # The directory where the generated files are located
+          target_branch: output
+          build_dir: dist
+        env:
+          # A secret token stored in your repository secrets
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
