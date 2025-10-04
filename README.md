@@ -65,6 +65,14 @@
   </tr>
 </table>
 
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/deepak-kumar-oss/deepak-kumar-oss/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/deepak-kumar-oss/deepak-kumar-oss/output/github-snake.svg">
+    <img alt="github snake animation" src="https://raw.githubusercontent.com/deepak-kumar-oss/deepak-kumar-oss/output/github-snake.svg">
+  </picture>
+</div>
+
 ---
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=deepak-kumar-oss&style=flat-square&color=blueviolet" alt="Visitor Count"/>
