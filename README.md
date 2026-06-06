@@ -50,20 +50,6 @@ fallen cold and dead
       />
     </td>
   </tr>
-  <tr align="center">
-    <td>
-      <img 
-        src="https://github-readme-streak-stats.herokuapp.com/?user=deepak-kumar-oss&theme=tokyonight&hide_border=false" 
-        alt="Deepak's GitHub Streak" 
-      />
-    </td>
-    <td>
-      <img 
-        src="https://github-readme-stats.vercel.app/api/top-langs/?username=deepak-kumar-oss&theme=tokyonight&hide_border=false&include_all_commits=false&count_private=false&layout=compact" 
-        alt="Deepak's Top Languages" 
-      />
-    </td>
-  </tr>
 </table>
 
 <div align="center">
